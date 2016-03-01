@@ -1,1 +1,41 @@
 // Insert your mixins
+
+@mixin horizCenter() {
+  margin: 0 auto;
+}
+
+@mixin ignoreAnchorColors() {
+  a {
+    &:link {
+      color: $black;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $black;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
+
+    }
+  }
+}
+
+@mixin ignoreAnchorColorsWhite() {
+  a {
+    &:link {
+      color: $white;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $white;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
+
+    }
+  }
+}

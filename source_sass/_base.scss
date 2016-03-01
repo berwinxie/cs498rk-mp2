@@ -1,1 +1,159 @@
 // Add any custom Sass & CSS here
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Gorditas|Gloria+Hallelujah);
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+
+body {
+  font-family: $font-title;
+  background-color: $primary-color-dark;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  color: white;
+}
+
+// slick arrows
+.slick-prev, .slick-next {
+  transform:scaleX(2)scaleY(2);
+}
+
+.top-bar-left{
+  left: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+#menu-bar-select {
+  z-index: 5000;
+}
+
+.reveal {
+  h1 {
+    color: $black;
+  }
+}
+
+.reveal-modal-bg {
+  position: fixed;
+}
+
+.fullWidth {
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ max-width: initial;
+}
+
+.fullHeight {
+  // height: 100%;
+  height: 80vh;
+}
+
+
+.script-title {
+  padding-top: 20px;
+  font-family: $font-secondary;
+  font-size: 4em;
+}
+
+#section-two {
+  // perspective: 1px;
+  // height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-size: cover;
+  background-image: url("../data/img/bear.jpg");
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+}
+
+
+#section-three {
+  height: 100vh;
+}
+
+
+
+footer {
+  @include ignoreAnchorColorsWhite();
+  background-color: $primary-color;
+  .social-buttons{
+    @include horizCenter();
+    .social-button {
+     color: $white;
+   }
+
+ }
+}
+
+section {
+  // height is the size of the viewport
+  // background-image: $header-img;
+  // perspective: 1px;
+  // padding-top: 38px;
+  font-family: $font-title;
+
+  .wbb-logo {
+
+    // put over video
+    position: absolute;
+
+    // center vertically
+    top: 50%;
+    left: 5%;
+    transform: translateY(-10vh)translateY(-50%);
+    width: 50vh;
+    z-index: 50;
+  }
+
+  .bearpic {
+    width: 100%;
+    // height: 30vw;
+    margin-top: 5%;
+    border-radius: 20%;
+    box-shadow: 5px 5px 5px;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    
+
+    &:hover {
+     opacity: 0.5;
+   }
+ }
+
+ .adventure-carousel {
+  @include horizCenter();
+  width: 80%;
+}
+.slide-pic {
+  @include horizCenter();
+  width: 70%;
+}
+
+video {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translateX(-50%)translateY(-50%)scaleX(1.3)scaleY(1.3);
+  z-index: -5;
+  }
+
+}
+
+.header-button {
+  @include ignoreAnchorColors();
+  &.active {
+    background-color: darken($primary-color-light, 10);
+  }
+  padding-top: 20px;
+  color: $black;
+}
