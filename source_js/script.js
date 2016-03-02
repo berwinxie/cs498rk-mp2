@@ -111,9 +111,13 @@ $(window).resize(function() {
     //if the window is greater than 440px wide then turn on jScrollPane..
     $('#menu-bar-select').addClass("horizontal");
     $('#menu-bar-select').removeClass("vertical");
+    $('#social-buttons').addClass("horizontal");
+    $('#social-buttons').removeClass("vertical");
   }
   else{
     $('#menu-bar-select').removeClass("horizontal");
     $('#menu-bar-select').addClass("vertical");
+    $('#social-buttons').removeClass("horizontal");
+    $('#social-buttons').addClass("vertical");
   }
 });
